@@ -51,6 +51,5 @@
 /vendor/bin/wifi-mac-generator                                              u:object_r:wifi_mac_generator_exec:s0
 
 # WIFI data
-/data/hostapd(/.*)?                                                         u:object_r:hostapd_data_file:s0
 /data/vendor/mac_addr(/.*)?                                                 u:object_r:vendor_wifi_vendor_data_file:s0
 /data/vendor/wlan_logs(/.*)?                                                u:object_r:vendor_wifi_vendor_log_data_file:s0
