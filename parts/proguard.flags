@@ -1,7 +1,3 @@
--keep class org.lineageos.settings.device.* {
-  *;
-}
-
 -keep class org.lineageos.settings.dirac.* {
   *;
 }
@@ -9,4 +5,3 @@
 -keep class org.lineageos.settings.doze.* {
   *;
 }
-
