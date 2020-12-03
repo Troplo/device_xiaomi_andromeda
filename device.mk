@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
     libcodec2_hidl@1.0.vendor
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Context Hub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
