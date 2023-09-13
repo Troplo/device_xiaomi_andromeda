@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # QTI Framework boost
 TARGET_SUPPORTS_FRAMEWORK_BOOST := false
@@ -22,7 +22,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/andromeda-firmware/firmware.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_andromeda
+PRODUCT_NAME := evolution_andromeda
 PRODUCT_DEVICE := andromeda
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 3 5G
