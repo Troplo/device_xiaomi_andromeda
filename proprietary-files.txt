@@ -1924,10 +1924,8 @@ vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
 vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
 
 # rootdir
-vendor/bin/audioshell_service
 vendor/bin/charge_logger
 vendor/bin/chre
-vendor/bin/displaycount
 vendor/bin/ftmdaemon
 vendor/bin/hbtp_daemon
 vendor/bin/mlid
@@ -1936,8 +1934,6 @@ vendor/bin/mmbn-daemon
 vendor/bin/mmid
 vendor/bin/sscrpcd
 vendor/bin/wdsdaemon
-vendor/etc/init.leds.sh
-vendor/etc/init.panel_info.sh
 vendor/etc/rcv.wav
 vendor/etc/rcv_hp.wav
 vendor/etc/spk.wav

@@ -378,7 +378,6 @@ PRODUCT_PACKAGES += \
     init.crda.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
-    init.qcom.coex.sh \
     init.qcom.crashdata.sh \
     init.qcom.early_boot.sh \
     init.qcom.efs.sync.sh \
@@ -401,11 +400,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     fstab.qcom \
-    ueventd.qcom.rc \
-    hack_attest.sh
-
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/bin/hack_attest.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/hack_attest.sh
+    ueventd.qcom.rc
 
 # RenderScript
 PRODUCT_PACKAGES += \

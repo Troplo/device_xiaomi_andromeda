@@ -18,14 +18,6 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := hack_attest.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/hack_attest.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.class_main.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
@@ -54,14 +46,6 @@ LOCAL_MODULE       := init.qcom.class_core.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := bin/init.qcom.class_core.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qcom.coex.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qcom.coex.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 

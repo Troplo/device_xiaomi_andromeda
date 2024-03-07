@@ -296,16 +296,6 @@ service displayfeature /system/bin/displayfeature
     user root
     group root
 
-service displaycount /vendor/bin/displaycount
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start displaycount
-
 on property:init.svc.surfaceflinger=stopped
     stop displayfeature
 
@@ -330,14 +320,6 @@ service nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
-
-
-service audioshell_service /vendor/bin/audioshell_service
-    oneshot
-    disabled
-
-on property:ro.vendor.miui.region=*
-    start audioshell_service
 
 on property:vendor.audio.cit.spkcal.copy=true
     copy /data/vendor/cit/tas2557_cal.bin /mnt/vendor/persist/audio/tas2557_cal.bin
