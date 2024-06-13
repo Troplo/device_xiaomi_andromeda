@@ -115,7 +115,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libcameraservice
+    libcameraservice \
+    libjpeg.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -175,6 +176,10 @@ PRODUCT_COPY_FILES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    libdumpstateutil.vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -329,7 +334,10 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libcurl.vendor \
+    libjson \
+    libjsoncpp.vendor \
+    libsqlite.vendor
 
 # QTI
 PRODUCT_PACKAGES += \
