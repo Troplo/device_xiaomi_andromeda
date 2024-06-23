@@ -1475,8 +1475,8 @@ system_ext/lib64/lib-imsvideocodec.so|5fcccffc53d43f2760968a0debf05c3a49b32cc0
 system_ext/lib64/lib-imsvt.so|0517dff9db29cbf4a2a62706e1ce3b322cf1d681
 system_ext/lib64/lib-imsvtextutils.so|19b0a5b9119388e735729e9a86ee7ee0a1355077
 system_ext/lib64/lib-imsvtutils.so|43a6fda66f13f86156f05a7f2b1681d0e5df4c8c
-system_ext/lib64/libimscamera_jni.so|ca67ceb33d74db1f2d84d06a827c1c7d06bd3256
-system_ext/lib64/libimsmedia_jni.so|38f3d53e6e494209be42c76583af8dc910c83a82
+system_ext/lib64/libimscamera_jni.so|ca67ceb33d74db1f2d84d06a827c1c7d06bd3256;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so|38f3d53e6e494209be42c76583af8dc910c83a82;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so|bb32703c026364da33ca1b4f83c839e1e312ae9b
 system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|7c1393cc48aa8143d55b34556a54815efc180afb
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|877e9b7a9fe66dbc4b92ba2697b5fdbf10c384f0
