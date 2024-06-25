@@ -32,7 +32,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
-        <version>3</version>
+        <version>4</version>
         <interface>
             <name>IBluetoothAudioProviderFactory</name>
             <instance>default</instance>
@@ -206,6 +206,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.wifi</name>
+        <version>2</version>
         <interface>
             <name>IWifi</name>
             <instance>default</instance>
@@ -213,6 +214,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.wifi.hostapd</name>
+        <version>2</version>
         <interface>
             <name>IHostapd</name>
             <instance>default</instance>
@@ -220,7 +222,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.wifi.supplicant</name>
-        <version>2</version>
+        <version>3</version>
         <interface>
             <name>ISupplicant</name>
             <instance>default</instance>
