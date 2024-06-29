@@ -1027,7 +1027,6 @@ vendor/lib/libqcodec2.so|01b1f94e7d17c5616635141ff7bc5e3f304b48f0
 # Media (Configs) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/etc/media_codecs_c2.xml|7b7525653c6f4cb072c49af087e24a0a3b7f85d6
 vendor/etc/media_codecs_performance.xml|e354753a8fb615b0c72764fe0591efe17f5b90ef
-vendor/etc/media_codecs_vendor_audio.xml|fdf23085b370ca296e2878d398a2c37dd25e45c0
 vendor/etc/media_codecs_vendor.xml|5023c32c93a8d05ebdc326780744a1c8606bb771
 vendor/etc/media_codecs.xml|0fb3492cf9d4a51f20be254908b042baa8df6e7f
 vendor/etc/media_profiles_vendor.xml|0d0827d623c04e648ac00770b55d8db1d70bebb2

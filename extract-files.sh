@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/media_codecs.xml|vendor/etc/media_codecs_vendor.xml)
+            sed -Ei "/media_codecs_(google_audio|google_telephony|vendor_audio)/d" "${2}"
+            ;;
     esac
 }
 
