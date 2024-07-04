@@ -9,6 +9,7 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/andromeda/andromeda-vendor.mk)
+$(call inherit-product, vendor/lindroid/lindroid.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
