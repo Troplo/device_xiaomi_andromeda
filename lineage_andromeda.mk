@@ -32,6 +32,7 @@ PRODUCT_DEVICE := andromeda
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 3 5G
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri=https://ota.troplo.comm.com/api/v1/{device}/{type}/{incr}
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Xiaomi/andromeda_eea/andromeda:9/PKQ1.190321.001/V12.0.7.0.PEMEUXM:user/release-keys
