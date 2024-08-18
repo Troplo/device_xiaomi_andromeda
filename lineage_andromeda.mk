@@ -40,5 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="andromeda-user 9 PKQ1.190321.001 V12.0.7.0.PEMEUXM release-keys" \
     PRODUCT_NAME="andromeda" \
     TARGET_DEVICE="andromeda"
+PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri=https://ota.troplo.com/api/v1/{device}/{type}/{incr}
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
