@@ -47,7 +47,6 @@
 
 # WIFI
 /vendor/bin/nv_mac                                                          u:object_r:vendor_wcnss_service_exec:s0
-/vendor/bin/wifi-mac-generator                                              u:object_r:wifi_mac_generator_exec:s0
 
 # WIFI data
 /data/vendor/mac_addr(/.*)?                                                 u:object_r:vendor_wifi_vendor_data_file:s0
