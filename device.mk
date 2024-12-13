@@ -153,9 +153,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/parts/snd,$(
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.graphics.composer@2.4-service
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
@@ -163,12 +161,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.memtrack-service
 
 PRODUCT_PACKAGES += \
     gralloc.msmnile \
-    hwcomposer.msmnile \
-    memtrack.msmnile
+    hwcomposer.msmnile
 
 PRODUCT_PACKAGES += \
     libtinyxml
@@ -243,6 +241,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
@@ -310,10 +311,18 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
 
 # Power
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
+
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.3 \
-    vendor.qti.hardware.perf@2.3.vendor
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -347,32 +356,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
-
-# QTI Framework boost
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/frameworkboost/proprietary/system/etc/permissions/com.qualcomm.qti.Performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.Performance.xml \
-    $(LOCAL_PATH)/frameworkboost/proprietary/system/etc/permissions/com.qualcomm.qti.UxPerformance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qualcomm.qti.UxPerformance.xml
-
-PRODUCT_PACKAGES += \
-    libtflite \
-    QPerformance \
-    QXPerformance \
-    UxPerformance
-
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
-ifeq ($(TARGET_SUPPORTS_FRAMEWORK_BOOST),true)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/frameworkboost/proprietary/system_ext/etc/permissions/privapp-permissions-com.qualcomm.qti.performancemode.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.qualcomm.qti.performancemode.xml
-
-PRODUCT_PACKAGES += \
-    FrameworkBoostOverlay \
-    PerformanceMode \
-    PowerSaveMode \
-    workloadclassifier
-endif
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -493,9 +476,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml
 
 # WiFi
-PRODUCT_PACKAGES += \
-    wifi-mac-generator
-
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \

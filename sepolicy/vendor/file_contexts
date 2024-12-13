@@ -18,7 +18,7 @@
 /vendor/bin/hw/android\.hardware\.light-service\.xiaomi                     u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.nfc-service\.nxp                          u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.sla\.service@1\.0-service                       u:object_r:hal_slaservice_default_exec:s0
-/vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service          u:object_r:hal_citsensorservice_xiaomi_default_exec:s0
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service      u:object_r:hal_citsensorservice_xiaomi_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@1\.0-service                 u:object_r:hal_misys_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@2\.0-service                 u:object_r:hal_misys_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@3\.0-service                 u:object_r:hal_misys_default_exec:s0
@@ -32,7 +32,6 @@
 /vendor/bin/batterysecret                                                   u:object_r:batterysecret_exec:s0
 /vendor/bin/charge_logger                                                   u:object_r:charge_logger_exec:s0
 /vendor/bin/remosaic_daemon                                                 u:object_r:remosaic_daemon_exec:s0
-/vendor/bin/tcpdump                                                         u:object_r:vendor_tcpdump_exec:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                            u:object_r:persist_subsys_file:s0
@@ -48,7 +47,6 @@
 
 # WIFI
 /vendor/bin/nv_mac                                                          u:object_r:vendor_wcnss_service_exec:s0
-/vendor/bin/wifi-mac-generator                                              u:object_r:wifi_mac_generator_exec:s0
 
 # WIFI data
 /data/vendor/mac_addr(/.*)?                                                 u:object_r:vendor_wifi_vendor_data_file:s0
